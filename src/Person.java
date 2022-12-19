@@ -2,23 +2,15 @@ import java.util.ArrayList;
 
 public class Person {
     private String name;
-    private Car car;        // will be null
+    private Car car;        // those who doesn't have a car it will be null
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 
-    public Car getCar() {
-        return car;
-    }
+    public Car getCar() { return car; }
 
-    public void setCar(Car car) {
-        this.car = car;
-    }
+    public void setCar(Car car) { this.car = car; }
 
     @Override
     public String toString() {
