@@ -4,49 +4,23 @@ public class Main {
     public static void main(String[] args) {
 
         Car car = new Car();
-        Person[] persons =  new Person[7];
+        ArrayList<Person> persons = new ArrayList<>();
+        Person[] person = new Person[6];
 
-        car.setMake("Car_1");
-        car.setPrice(1000);
+        String[] carMake = {"Car_1","Car_2","Car_3","Car_2", null, null};
+        String[] personName = {"Name 1","Name 2","Name 3","Name 4","Name 5","Name 6"};
+        int[] carPrices = { 1000, 2000, 10000, 2000, 0, 0};
 
-        persons[0].setName("Name 1");
-        persons[0].setCar(car);
+        for (int i=0; i<=5; i++) {
+            car.setMake(carMake[i]);
+            car.setPrice(carPrices[i]);
 
-        car.setMake("Car_2");
-        car.setPrice(2000);
+            person[i].setName(personName[i]);
+            person[i].setCar(car);
 
-        persons[1].setName("Name 2");
-        persons[1].setCar(car);
+        }
 
-        car.setMake("Car_3");
-        car.setPrice(10000);
-
-        persons[2].setName("Name 3");
-        persons[2].setCar(car);
-
-        car.setMake("Car_2");
-        car.setPrice(2000);
-
-        persons[3].setName("Name 4");
-        persons[3].setCar(car);
-
-        car.setMake("Car_1");
-        car.setPrice(1000);
-
-        persons[4].setName("Name 5");
-        persons[4].setCar(car);
-
-        car = null;
-
-        persons[5].setName("Name 6");
-        persons[5].setCar(car);
-
-        car = null;
-
-        persons[6].setName("Name 7");
-        persons[6].setCar(car);
-
-        for (Person p: persons ) System.out.println(p);
+        System.out.println(person);
 
     }
 }
